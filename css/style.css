@@ -79,7 +79,7 @@ header a:hover{
 /*showcase*/
 #showcase {
     min-height: 400px;
-    background:url('../Images/the-coffee-bean-and-tea-leaf-6.jpg')no-repeat 0 -400px /*no-repeat -400px*/;
+    background:url('../Images/coffee2.jpg')no-repeat 0 -400px /*no-repeat -400px*/;
     text-align: center;
     color: lavender;
 }
