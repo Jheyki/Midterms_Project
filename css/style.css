@@ -18,6 +18,13 @@ ul{
     color:silver
 }
 
+.dark{
+    padding:15px;
+    background:lightsalmon;
+    color:#4b4646;
+    margin-top:10px;
+}
+
 /*Global*/
 .container{
     width: 80%;
@@ -90,7 +97,7 @@ showcase p{
 #newsletter{
     padding:15px;
     color: rgb(0, 0, 0);
-    background: rgba(148, 112, 45, 0.74);
+    background:coral;
 }
 
 #newsletter h1{
@@ -106,4 +113,85 @@ showcase p{
     padding:4px;
     height:25px;
     width:250px;
+}
+
+/*Boxes*/
+#boxes .box{
+    float:left;
+    text-align: center;
+    width:30%;
+    padding:10px;
+}
+
+#boxes .box img{
+    width: 90px;
+}
+
+/*Sidebar*/
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top:10px;
+}
+
+aside#sidebar .qoute input, aside#sidebar .qoute textarea{
+    width:90%;
+    width:65%;
+}
+
+/*Main-col*/
+
+article#main-col{
+    float:left;
+    width:65%;
+}
+
+/*Services*/
+ul#Orders li{
+    list-style: none;
+    padding:20px;
+    border:#cccccc solid 1px;
+    background:#b8964da6;
+}
+
+footer{
+    padding:20px;
+    margin-top: 20px;
+    color: black;
+    background-color:chocolate;
+    text-align: center;
+}
+
+@media(max-width: 768px){
+    header #branding,
+        header nav,
+        header nav li,
+        #newsletter h1,
+        #newsletter form,
+        #boxes .box,
+        article#main-col,
+        aside#sidebar{
+        float: none;
+        text-align: center;
+        width:100%;
+    }
+    
+    header{
+        padding-bottom:20px;
+    }
+
+    showcase h1{
+        margin-top:40px;
+    }
+
+    #newsletter .button .qoute button{
+        display: block;
+        width: 100%;
+
+    }
+
+    #newsletter form input[type="email"], qoute input, .qoute input, .qoute textarea{
+        width:100%;
+        margin-bottom:5px;
+    }
 }
