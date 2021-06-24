@@ -4,6 +4,19 @@ margin:0;
 background-color: burlywood;
 }
 
+ul{
+    margin:0;
+    padding:0;
+}
+
+.button_1{
+    height:38px;
+    background: salmon;
+    border:0;
+    padding-left:2opx;
+    padding-right:20px;
+    color:silver
+}
 
 /*Global*/
 .container{
@@ -14,7 +27,7 @@ background-color: burlywood;
 
 header{
     background: coral;
-    color: cornsilk;
+    color: rgb(201, 189, 132);
     padding-top:30px;
     min-height: 70px;
     border-bottom: darkgoldenrod 3px solid;
@@ -44,4 +57,53 @@ header #branding h1{
 header nav{
     float: right;
     margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+header a:hover{
+    color: khaki;
+    font-weight: bold;
+}
+
+/*showcase*/
+#showcase {
+    min-height: 400px;
+    background:url('../Images/the-coffee-bean-and-tea-leaf-6.jpg')no-repeat 0 -400px /*no-repeat -400px*/;
+    text-align: center;
+    color: lavender;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom:10px;
+}
+
+showcase p{
+    font-size: 20px;
+}
+
+#newsletter{
+    padding:15px;
+    color: rgb(0, 0, 0);
+    background: rgba(148, 112, 45, 0.74);
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+    padding:4px;
+    height:25px;
+    width:250px;
 }
