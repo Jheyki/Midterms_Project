@@ -9,6 +9,16 @@ ul{
     padding:0;
 }
 
+#gmail2Email {
+float: right;
+margin: auto;
+padding-bottom:10px;    
+}
+
+.margin {
+margin-bottom: 10px;
+
+}
 .button_1{
     height:38px;
     background: salmon;
@@ -16,6 +26,10 @@ ul{
     padding-left:2opx;
     padding-right:20px;
     color:silver
+}
+.button_1:hover{
+    color: khaki;
+    font-weight: bold;
 }
 
 .dark{
@@ -176,7 +190,8 @@ footer{
         #newsletter form,
         #boxes .box,
         article#main-col,
-        aside#sidebar{
+        aside#sidebar,
+        #gmail2Email{
         float: none;
         text-align: center;
         width:100%;

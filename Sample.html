@@ -5,8 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About</title>
-        <link rel="stylesheet" href="./css/style.css"
-    
+        <link rel="stylesheet" href="./css/style.css">
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+           <script type="text/javascript">
+                (function() {
+                    emailjs.init("user_sna6J7lSlKQdUwip55GLA");
+                         })();
+            </script>
     </head>
 
     <body>
@@ -27,17 +33,48 @@
         <section id="newsletter">
             <div class="container">
                 <h1>Subscribe to Kapoy☕<span style="color: rgb(201, 189, 132)">Coffee</span></h1>
-                <form>
-                    <input type="email" placeholder="Enter Email...">
-                    <button type=" submit" class="button_1">Subscribe</button>
-                </form>
+                    <div id="gmail2Email">
+                    <input class="margin" type="text" id="fromName" placeholder="Enter from name"> <br>
+                    <input class="margin" type="text" id="toName" placeholder="Enter to name">     <br>
+                    <input class="margin" type="text" id="msg" placeholder="Enter your Message">   <br>
+                <center>    <button onclick="sendMail()" class="button_1">Send Email</button>
+                    </center>
+                    </div>
+                    <script>
+                        function sendMail(params){
+                              var tempParams = {
+                             from_name:document.getElementById("fromName").value,
+                             to_name:document.getElementById("toName").value,
+                             message:document.getElementById("msg").value,
+                             }
+                             emailjs.send('kapoycoffe62@gmail.com','KapoyCoffee62', tempParams)
+                            .then(function(res){
+                            console.log("success",res.status)
+                              })
+                          }
+                    </script>
+                    </div>
         </section>
-
-        <input type="text" id="toName" placeholder="Enter to name">
+        <!--
         <input type="text" id="fromName" placeholder="Enter from name">
-        <input type="text" id="msg" placeholder="Enter your Message">
-        <button>Send Email</button>
+        <input type="text" id="toName" placeholder="Enter to name">
+        <input type="text" id="msg" placeholder="Enter your Message">  
+        <button onclick="sendMail()">Send Email</button>
 
+        <script>
+            function sendMail(params){
+                  var tempParams = {
+                 from_name:document.getElementById("fromName").value,
+                 to_name:document.getElementById("toName").value,
+                 message:document.getElementById("msg").value,
+                 }
+                 emailjs.send('kapoycoffe62@gmail.com','KapoyCoffee62', tempParams)
+                .then(function(res){
+                console.log("success",res.status)
+                  })
+              }
+        </script>
+        --> 
         <footer>
             <p>Jhey Web Design, Copyright &copy;2021 </p>
         </footer>
