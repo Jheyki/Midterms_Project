@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="kisspng-coffee-icon100-computer-icons-android-pub-5ac22f74a52c66.4654610315226755726766.jpg">
+
 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
            <script type="text/javascript">
@@ -46,21 +48,29 @@
                                         <b>Jerome S. Cortez</b>
                                             </center>
                     </div>
-                <script>
+                    <script>
+                    
                     function sendMail(params){
-                      var tempParams = {
-                         from_name:document.getElementById("fromName").value,
-                         to_name:document.getElementById("toName").value,
-                         //message:document.getElementById("msg").value,
-                         }
-
-                         emailjs.send('kapoycoffe62@gmail.com','KapoyCoffee62', tempParams)
-                        .then(function(res){
-                        console.log("success",res.status)
-                          })
-                  }
-
-                </script>
+                    
+                            var tempParams = {
+                            
+                    
+                            from_name:document.getElementById("fromName").value,
+                            to_name:document.getElementById("toName").value,
+                            //message:document.getElementById("msg").value,
+                            }
+                    
+                            emailjs.send('kapoycoffe62@gmail.com','KapoyCoffee62', tempParams)
+                           .then(function(res){
+                           console.log("success",res.status)
+                             })
+                           }
+                    
+                        
+                    
+                    
+                    </script>
+                    
 
                      <div id="devs" >
                         <section style="text-align: center;">

@@ -19,13 +19,8 @@ input.margin {
     overflow: hidden;
   }
   
-#caramel{
-    background-image: image-set("/images/caramel-coffee.jpg");
-    background-color: image;
-}
-  
 
-  .content {
+.content {
     background:lightblue;
     padding:5px;
     margin-left: 195px;
@@ -60,13 +55,6 @@ margin-bottom: 10px;
     font-weight: bold;
 }
 
-.dark{
-    padding:15px;
-    background:lightsalmon;
-    color:#4b4646;
-    margin-top:10px;
-    background-size: initial;
-}
 
 /*Global*/
 .container{
@@ -211,7 +199,6 @@ footer{
         #newsletter form,
         #boxes .box,
         article#main-col,
-        aside#sidebar,
         #gmail2Email,
         #my_pics,
         #devs{
@@ -238,4 +225,6 @@ footer{
         width:100%;
         margin-bottom:5px;
     }
+
+    
 }
