@@ -4,9 +4,37 @@ margin:0;
 background-color: burlywood;
 }
 
+
 ul{
     margin:0;
     padding:0;
+}
+
+input.margin {
+    text-align: center;
+}
+
+
+.container {
+    overflow: hidden;
+  }
+  
+#caramel{
+    background-image: image-set("/images/caramel-coffee.jpg");
+    background-color: image;
+}
+  
+
+  .content {
+    background:lightblue;
+    padding:5px;
+    margin-left: 195px;
+  }
+
+
+#devs .developers .developers2 {
+height: 100px;
+width:  100px;
 }
 
 #gmail2Email {
@@ -37,6 +65,7 @@ margin-bottom: 10px;
     background:lightsalmon;
     color:#4b4646;
     margin-top:10px;
+    background-size: initial;
 }
 
 /*Global*/
@@ -148,22 +177,14 @@ showcase p{
 }
 
 /*Sidebar*/
-aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top:10px;
-}
 
-aside#sidebar .qoute input, aside#sidebar .qoute textarea{
-    width:90%;
-    width:65%;
-}
+
 
 /*Main-col*/
 
 article#main-col{
     float:left;
-    width:65%;
+    width:90%;
 }
 
 /*Services*/
@@ -191,7 +212,9 @@ footer{
         #boxes .box,
         article#main-col,
         aside#sidebar,
-        #gmail2Email{
+        #gmail2Email,
+        #my_pics,
+        #devs{
         float: none;
         text-align: center;
         width:100%;
