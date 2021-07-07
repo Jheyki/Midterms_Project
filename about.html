@@ -2,13 +2,19 @@
 <html lang="en">
 <html>
     <head>
+        <!--- below is the standard meta code -->
         <meta charset="UTF-8">
+        <!--- below is the standard meta code --> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--- below is title of the Website  -->
         <title>About</title>
+        <!--- below is the connection of calling css to format the display of html -->
+        <!--- we also used inline css -->
         <link rel="stylesheet" href="./css/style.css">
+        <!-- below is the website icon -->
         <link rel="icon" href="kisspng-coffee-icon100-computer-icons-android-pub-5ac22f74a52c66.4654610315226755726766.jpg">
 
-
+        <!-- connecting the webstite to Emailjs using javascripit -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
            <script type="text/javascript">
                 (function() {
@@ -19,10 +25,12 @@
 
     <body>
         <header>
+            <!-- div area for the branding -->
             <div class="container">
                 <div id="branding">
                     <h1><span class="highlight">Kapoy</span>☕Coffee</h1>
             </div>
+                <!--- below is the navigation area -->
                 <nav>
                     <ul>
                         <li ><a href="Main.html">Home</a>
@@ -31,10 +39,10 @@
                     </ul>
             </div>
         </header>
-       
+        <!--- below is the navigation area -->
         <section id="newsletter">
-
                     <div id="gmail2Email">
+                        <!-- input area -->
                         <center><h3>Contact Us📧</h3></center>
                         <input class="margin" type="text" id="fromName" placeholder="Your Name"> <br>
                         <input class="margin" type="text" id="toName" placeholder="You're Email">     <br>
@@ -48,18 +56,22 @@
                                         <b>Jerome S. Cortez</b>
                                             </center>
                     </div>
-                    <script>
+
+                <!-- The javascript -->
+                <script>
                     
                     function sendMail(params){
                     
                             var tempParams = {
                             
-                    
+                            // gets the input value from "fromName" then transfered to "from_name"
                             from_name:document.getElementById("fromName").value,
+                            // gets the input value from "toName" then transfered to "to_name"
                             to_name:document.getElementById("toName").value,
                             //message:document.getElementById("msg").value,
                             }
-                    
+                            
+                            // script for sending the data to emailjs.com
                             emailjs.send('kapoycoffe62@gmail.com','KapoyCoffee62', tempParams)
                            .then(function(res){
                            console.log("success",res.status)
@@ -68,7 +80,7 @@
 
                     </script>
                     
-
+                    <!-- Display the Developers behind the project -->>
                      <div id="devs" >
                         <section style="text-align: center;">
                             <h2>☕Contributors☕</h2>
@@ -78,7 +90,8 @@
                         </section>
                     </div>
             </section>
-
+        
+        <!-- tells about the Coffee brand --> 
         <article style="padding:20px;">
             <div style="margin: auto;">
                 <h3>About Us</h3>
@@ -86,7 +99,7 @@
             </div>
         </article>
 
-        <!--
+        <!-- Do not mind this comment <----
         <input type="text" id="fromName" placeholder="Enter from name">
         <input type="text" id="toName" placeholder="Enter to name">
         <input type="text" id="msg" placeholder="Enter your Message">  
@@ -106,6 +119,8 @@
               }
         </script>
         --> 
+
+        <!-- footer area -->
         <footer>
             <p>Jhey Web Design, Copyright &copy;2021 </p>
         </footer>
