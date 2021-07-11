@@ -14,7 +14,44 @@
           <!--- below is the website icon -->
         <link rel="icon" href="kisspng-coffee-icon100-computer-icons-android-pub-5ac22f74a52c66.4654610315226755726766.jpg">
 
-    </head>
+        <style>
+
+        .kaptitle{
+        color: black;
+        }
+
+        .coff{
+        color: rgb(201, 189, 132);
+        }
+
+        .highlight{
+        color: black;
+        }
+
+
+                span{
+        opacity: 0;
+        transition: all 0.4s ease;
+        display: inline-block;
+        transform: translateX(50px);
+        color:rgb(177, 143, 34);
+                }
+
+                span.fade {
+        opacity: 1;
+                    transform: perspective(20px); 
+        color: rgb(0, 0, 0);
+       }
+
+                .hoy{
+                    color: rgb(201, 189, 132)
+                }
+
+
+
+          </style>
+
+     </head>
 
     <body>
         <!--- below is the header -->
@@ -22,8 +59,45 @@
             <!--- below is the div which creates partition below the header section -->
             <div class="container">
                 <div id="branding">
-                    <h1><span class="highlight">Kapoy</span>☕Coffee</h1>
+                    <h1 class="kaptitle">Kapoy☕<b class="hoy">Coffee</b></h1>
                 </div>
+
+                <script>
+                    // created an object ot as "text" and chose a querySelector then locate the fancy class
+                    const text = document.querySelector(".kaptitle")
+                    // created an object to convert the "text" container value that is read by the .textContent
+                    const strText = text.textContent;
+                    // calling the "strText" value if the conversion is succesfull.
+                    //console.log(strText)
+
+                    // created an object to convert the string value to split and contain in the char value to a array 
+                    const splitText = strText.split("")
+                    //checking of the split Text
+                    //console.log(splitText)
+
+                    text.textContent="";
+
+                    for(let i=0; i < splitText.length; i++) {
+                        text.innerHTML += "<span>"+splitText[i]+"</span>";
+                    }
+                    let char = 0;
+                    let timer = setInterval(onTick,50);
+
+                    function onTick(){
+                        const span = text.querySelectorAll("span")[char];
+                        span.classList.add('fade');
+                        char++
+
+                        if(char === splitText.length){
+                            complete();
+                            return
+                        }
+                    }
+
+                </script>
+
+
+
                 <!--- below is the navigation area -->
                 <nav>
                     <ul>
@@ -38,15 +112,18 @@
         <!--- below is the showcase area which displays image -->
         <section id="showcase">
             <div class="container">
-                <h1>Kapoy☕<span style="color: rgb(201, 189, 132)">Coffee</span></h1>
+                <h1>Kapoy☕Coffee</span></h1>
                 <p style="font-family:cursive ; font-size: 20px; text-shadow: grey;">Our business aims to satisfy the needs of our customers for delicious coffees and provide a nutritional treat for such an affordable price that it will be worth the customer’s money.	</p>
+            
+            
             </div>
         </section>
 
         <!--- below is the area where html supporting detailes are introduced -->
         <section id="newsletter">
             <div class="container">
-                <h1 style="float: right; font-family: cursive; font-size: 30px ;" >The <span style="color:blue;">Phil</span><span style="color:yellow">lipp</span><span style="color: red;">ine's</span> Kapoy☕<span style="color: rgb(201, 189, 132)">Coffee</span></h1>
+                <h1 class="philip" style="float: right; font-family: cursive; font-size: 30px ;" >The <b style="color:blue;">Phil</b><b style="color:yellow">lipp</b><b style="color: red;">ine's</b> Kapoy☕<b style="color: rgb(201, 189, 132)">Coffee</b></h1>
+
         </section>
 
         <!--- below is the boxes that displays the website softwares used for the website-->
