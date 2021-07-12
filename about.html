@@ -16,8 +16,12 @@
 
         <!-- connecting the webstite to Emailjs using javascripit -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-           <script type="text/javascript">
+            
+            <!-- javascript emailjs integration-->
+            <script type="text/javascript">
+                //emailjs connection set up
                 (function() {
+                    //calling and initialization of emailjs from acc. ("user_sna6J7lSlKQdUwip55GLA");
                     emailjs.init("user_sna6J7lSlKQdUwip55GLA");
                          })();
             </script>
@@ -28,18 +32,59 @@
             <!-- div area for the branding -->
             <div class="container">
                 <div id="branding">
-                    <h1><span class="highlight">Kapoy</span>☕Coffee</h1>
-            </div>
-                <!--- below is the navigation area -->
-                <nav>
-                    <ul>
-                        <li ><a href="Main.html">Home</a>
-                        <li class="current"><a href="about.html">About</a>
-                        <li ><a href="Orders.html">Orders</a>
-                    </ul>
-            </div>
+                    <header>
+                        <!-- div area for the branding -->
+                        <div class="container">
+                            <div id="branding">
+                                <h1 class="kaptitle2">Kapoy☕Coffee</h1>
+                    </div>
+                    <script>
+                        // created an object ot as "text" and chose a querySelector then locate the fancy class
+                        const text2 = document.querySelector(".kaptitle2")
+                        // created an object to convert the "text" container value that is read by the .textContent
+                        const strText2 = text2.textContent;
+                        // calling the "strText" value if the conversion is succesfull.
+                        //console.log(strText)
+            
+                        // created an object to convert the string value to split and contain in the char value to a array 
+                        const splitText2 = strText2.split("")
+                        //checking of the split Text
+                        //console.log(splitText)
+            
+                        text2.textContent=""; // set the "textContent" value to be empty 
+            
+                        for(let i=0; i < splitText2.length; i++) {
+                            text2.innerHTML += "<span>"+splitText2[i]+"</span>";
+                        }
+                        let char2 = 0;
+                        let timer2 = setInterval(onTick2,50);
+            
+                        function onTick2(){
+                            const span = text2.querySelectorAll("span")[char2];
+                            try{
+                            span.classList.add('fade');
+                            char2++
+            
+                            if(char2 === splitText2.length){
+                                complete();
+                                return
+                                }
+                            }
+                                catch (e){
+
+                                }
+                            }
+                    </script>
+                            <!--- below is the navigation area -->
+                            <nav>
+                                <ul>
+                                    <li ><a href="Main.html">Home</a>
+                                    <li class="current"><a href="about.html">About</a>
+                                    <li><a href="Orders.html">Orders</a>
+                                </ul>
+                                </nav>
         </header>
-        <!--- below is the navigation area -->
+
         <section id="newsletter">
                     <div id="gmail2Email">
                         <!-- input area -->
@@ -57,42 +102,34 @@
                                         <b>Jerome S. Cortez</b>
                                             </center>
                     </div>
-
                 <!-- The javascript -->
                 <script>
                     
                     function sendMail(params){
-                    
                             var tempParams = {
-                            
                             // gets the input value from "fromName" then transfered to "from_name"
                             from_name:document.getElementById("fromName").value,
                             // gets the input value from "toName" then transfered to "to_name"
                             to_name:document.getElementById("toName").value,
                             //message:document.getElementById("msg").value,
                             }
-                            
                             // script for sending the data to emailjs.com
                             emailjs.send('kapoycoffe62@gmail.com','KapoyCoffee62', tempParams)
                            .then(function(res){
                            console.log("success",res.status)
-                             })
-                           }
-
-                    </script>
-                    
-                    <!-- Display the Developers behind the project -->>
+                                            })
+                    }
+                </script>
+                    <!-- Display the Developers behind the project -->
                      <div id="devs" >
                         <section style="text-align: center;">
                             <h2>☕Contributors☕</h2>
                             <img src="dev/69223125_657189124802207_310160444805349376_n.jpg" height="25%" width="25%" style=" border-radius: 8px; ">
                             <img src="dev/142472539_1915059122004966_1083914219370274319_n.jpg" height="25%" width="25%" style=" border-radius: 8px; " >
                             <img src="dev/203109653_4053508174762910_8788694159011120467_n.jpg" height="25%" width="25%" style=" border-radius: 8px; ">
-
                         </section>
                     </div>
-            </section>
-        
+        </section>
         <!-- tells about the Coffee brand --> 
         <article style="padding:20px;">
             <div style="margin: auto;">
@@ -100,13 +137,11 @@
                 <p style="text-align: justify;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Taste and See Kapoy Coffee Shop and a unique coffee house environment unlike any other in Taguig. We are not only a place to drop in and get your morning cup of coffee (although you are more than welcome to do that), we are a place where you can sit down and enjoy that tailor-made cup of coffee. If you need to work, we have a seating area created specifically for you. If you need to rest, we have a soft-seating area in front of a stone fire place that is perfect for your weary mind and body. We offer a delicious variety of coffee from Kapoy Coffee made by our professionally trained baristas. We have everything from classic coffee to our house made specialty beverages. All of our sauces & syrups are made in-house with all natural ingredients (no chemicals or preservatives) ensuring you the highest quality in taste & health. You can complete your coffee with one of our delicious sweet treats made by our very own baker. We look forward to serving you at Taste & See Kapoy Coffee Shop!</p>       
             </div>
         </article>
-
         <!-- Do not mind this comment <----
         <input type="text" id="fromName" placeholder="Enter from name">
         <input type="text" id="toName" placeholder="Enter to name">
         <input type="text" id="msg" placeholder="Enter your Message">  
         <button onclick="sendMail()">Send Email</button>
-
         <script>
             function sendMail(params){
                   var tempParams = {
@@ -121,12 +156,11 @@
               }
         </script>
         --> 
-
         <!-- footer area -->
-        <footer>
-            <p>Jhey Web Design, Copyright &copy;2021 </p>
-        </footer>
-
     </body>
 
+    <footer>
+        <p>Jhey Web Design, Copyright &copy;2021 </p>
+    </footer>
+    
 </html>
