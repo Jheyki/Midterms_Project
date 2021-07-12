@@ -45,6 +45,9 @@ header a:hover{
     font-weight: bold;
 }
 
+img .move:hover{
+    transform:rotate();
+}
 
 body{font: 15px/1.5 Arial, Helvetica, sans-serif;
 padding:0;
@@ -93,7 +96,8 @@ margin-bottom: 10px;
     border:0;
     padding-left:2opx;
     padding-right:20px;
-    color:silver
+    color:silver;
+    text-align: center;
 }
 .button_1:hover{
     color: khaki;
@@ -159,9 +163,6 @@ showcase p{
     padding:10px;
 }
 
-#boxes .box img{
-    width: 90px;
-}
 
 /*Sidebar*/
 
@@ -195,7 +196,10 @@ footer{
         #boxes .box,
         #gmail2Email,
         #my_pics,
-        #devs{
+        #devs
+        footerf,
+        .button_1,
+        h1 #kaptitle,#kaptitle3,#kaptitle2{
         float: none;
         text-align: center;
         width:100%;
@@ -241,5 +245,54 @@ footer{
             color: rgb(0, 0, 0);
         }
 
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        .pre-header {
+            background-color: #111618;
+            height: 60px;
+            color: #fff;
+            padding-top: 15px;
+        
+        }
+        
+        .pre-header .secondary-menu {
+            list-style: none;
+        }
+        
+        .pre-header .secondary-menu li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        
+        .pre-header .secondary-menu li a {
+            color: #787374;
+            text-transform: uppercase;
+        }
+        
+        .main-nav .main-menu {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .main-nav .main-menu li {
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .main-nav .main-menu li a {
+            color: #767676;
+            text-transform: uppercase;
+        }
+        
+        .main-nav img {
+            margin-top: 10px;
+        }
+        
     
 }

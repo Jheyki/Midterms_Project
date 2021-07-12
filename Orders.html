@@ -56,7 +56,6 @@
                                     }
                                 }
                             catch(e){
-
                             }
                         }
 
@@ -77,19 +76,133 @@
                    <ul id="Orders">
                         <!-- products best seller's -->
                         <li>
-                            <h3 class="call">KAPOYCA☕(Caramel latte)</h3>
+                            <h3 class="call1">KAPOYCA☕(Caramel latte)</h3>
+                            <script>
+                                // created an object ot as "text" and chose a querySelector then locate the fancy class
+                                    const textc1 = document.querySelector(".call1")
+                                // created an object to convert the "text" container value that is read by the .textContent
+                                    const strTextc1 = textc1.textContent;
+                                // calling the "strText" value if the conversion is succesfull.
+                                //console.log(strText)
+                        
+                                // created an object to convert the string value to split and contain in the char value to a array 
+                                    const splitTextc1 = strTextc1.split("")
+                                //checking of the split Text
+                                //console.log(splitText)
+                        
+                                    textc1.textContent=""; // set the "textContent" value to be empty 
+                        
+                                for(let i=0; i < splitTextc1.length; i++) {
+                                    textc1.innerHTML += "<span>"+splitTextc1[i]+"</span>";
+                                    }
+                                    let charc1 = 0;
+                                    let timerc1 = setInterval(onTickc1,50);
+                        
+                                    function onTickc1(){
+                                    const span = textc1.querySelectorAll("span")[charc1];
+                                        try{
+                                            span.classList.add('fade');
+                                            charc1++
+                            
+                                            if(charc1 === splitTextc1.length){
+                                                complete();
+                                                return
+                                                }
+                                            }
+                                        catch(e){
+            
+                                        }
+                                    }
+            
+                            </script>
                             <p>Rich espresso is gently swirled with flavors of caramel and vanilla, steamed milk and simple syrup, then drizzled with mocha and caramel sauces.</p>
-                            <p>Pricing:  <span>&#8369</span>100.00 Pesos</p>
+                            <p><b>Pricing:</b>  <strong>&#8369 100.00</strong> Pesos</p>
                         </li>
                         <li>
-                            <h3 class="call1">KAPOYHA☕(Hazelnut latte) </h3>
+                            <h3 class="call2">KAPOYHA☕(Hazelnut latte) </h3>
+                            <script>
+                                // created an object ot as "text" and chose a querySelector then locate the fancy class
+                                    const textc2 = document.querySelector(".call2")
+                                // created an object to convert the "text" container value that is read by the .textContent
+                                    const strTextc2 = textc2.textContent;
+                                // calling the "strText" value if the conversion is succesfull.
+                                //console.log(strText)
+                        
+                                // created an object to convert the string value to split and contain in the char value to a array 
+                                    const splitTextc2 = strTextc2.split("")
+                                //checking of the split Text
+                                //console.log(splitText)
+                        
+                                    textc2.textContent=""; // set the "textContent" value to be empty 
+                        
+                                for(let i=0; i < splitTextc2.length; i++) {
+                                    textc2.innerHTML += "<span>"+splitTextc2[i]+"</span>";
+                                    }
+                                    let charc2 = 0;
+                                    let timerc2 = setInterval(onTickc2,50);
+                        
+                                    function onTickc2(){
+                                    const span = textc2.querySelectorAll("span")[charc2];
+                                        try{
+                                            span.classList.add('fade');
+                                            charc2++
+                            
+                                            if(charc2 === splitTextc2.length){
+                                                complete();
+                                                return
+                                                }
+                                            }
+                                        catch(e){
+            
+                                        }
+                                    }
+            
+                            </script>
                             <p>Hazelnut-praline-infused milk combined with our small-lot espresso—a true character of sweetly nut love.</p>
-                            <p>Pricing:  <span>&#8369</span>100.00 Pesos</p>
+                            <p><b>Pricing:</b>  <strong>&#8369 100.00</strong> Pesos</p>
                         </li>
                         <li>
-                            <h3 class="call2">KAPOYNO☕(Americano)</h3>
+                            <h3 class="call3">KAPOYNO☕(Americano)</h3>
+                            <script>
+                                // created an object ot as "text" and chose a querySelector then locate the fancy class
+                                    const textc3 = document.querySelector(".call3")
+                                // created an object to convert the "text" container value that is read by the .textContent
+                                    const strTextc3 = textc3.textContent;
+                                // calling the "strText" value if the conversion is succesfull.
+                                //console.log(strText)
+                        
+                                // created an object to convert the string value to split and contain in the char value to a array 
+                                    const splitTextc3 = strTextc3.split("")
+                                //checking of the split Text
+                                //console.log(splitText)
+                        
+                                    textc3.textContent=""; // set the "textContent" value to be empty 
+                        
+                                for(let i=0; i < splitTextc3.length; i++) {
+                                    textc3.innerHTML += "<span>"+splitTextc3[i]+"</span>";
+                                    }
+                                    let charc3 = 0;
+                                    let timerc3 = setInterval(onTickc3,50);
+                        
+                                    function onTickc3(){
+                                    const span = textc3.querySelectorAll("span")[charc3];
+                                        try{
+                                            span.classList.add('fade');
+                                            charc3++
+                            
+                                            if(charc3 === splitTextc3.length){
+                                                complete();
+                                                return
+                                                }
+                                            }
+                                        catch(e){
+            
+                                        }
+                                    }
+            
+                            </script>
                             <p>Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with an extra shot.</p>
-                            <p>Pricing:  <span>&#8369</span> 100.00 Pesos</p>
+                            <p><b>Pricing:</b>  <strong>&#8369 100.00</strong> Pesos</p>
                         </li>
                    </ul>
                 </article>
@@ -97,7 +210,7 @@
         </section>
     </body>
     <footer>
-        <p>Jhey Web Design, Copyright &copy;2021 </p>
+        <p>JheyDesign, Copyright&copy;2021 </p>
     </footer>
 
 
