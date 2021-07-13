@@ -89,8 +89,8 @@
                     <div id="gmail2Email">
                         <!-- input area -->
                         <center><h3>Contact Us📧</h3></center>
-                        <input class="margin" type="text" id="fromName" placeholder="Your Name"> <br>
-                        <input class="margin" type="text" id="toName" placeholder="You're Email">     <br>
+                        <input class="margin" type="text" id="user" placeholder="Username"> <br>
+                        <input class="margin" type="text" id="email" placeholder="Your Email">     <br>
                         <!-- <input class="margin" type="text" id="msg" placeholder="Enter your Message"> <br>---> 
                             <center>    
                                 <button onclick="sendMail()" class="button_1">Send Email</button> 
@@ -107,10 +107,11 @@
                     
                     function sendMail(params){
                             var tempParams = {
-                            // gets the input value from "fromName" then transfered to "from_name"
-                            from_name:document.getElementById("fromName").value,
-                            // gets the input value from "toName" then transfered to "to_name"
-                            to_name:document.getElementById("toName").value,
+                            // gets the input value from id "user" then transfered to "to_name"
+                            to_name:document.getElementById("user").value,
+                            // gets the input value from id "email" then transfered to "to_name"
+                            from_name:document.getElementById("email").value,
+
                             //message:document.getElementById("msg").value,
                             }
                             // script for sending the data to emailjs.com
